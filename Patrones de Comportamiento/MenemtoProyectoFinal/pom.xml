@@ -11,4 +11,5 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>com.mycompany.menemtoproyectofinal.MenemtoProyectoFinal</exec.mainClass>
     </properties>
+    <name>MementoProyectoFinal</name>
 </project>
