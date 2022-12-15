@@ -1,30 +1,28 @@
 package fabrica;
 
-public class FabricaHamb extends Fabrica{
-    private Director director;
-    private HamburguesaBuilder sencilla;
-    private HamburguesaBuilder vegetariana;
-    private Hamburguesa hamburguesa;
+public class Hamburguesa {
+    private String pan = "";
+    private String salsas = "";
+    private String carne = "";
+    private String adiciones = "";
     
-    public FabricaHamb(){
-        director = new Director();
-        sencilla = new SencillaBuilder();
-        vegetariana = new VegetarianaBuilder();
-    }
-
-    @Override
-    public Hamburguesa getHamb(String hamburguesa) {
-        switch(hamburguesa){
-            case "sencilla":
-                director.setBuilder(sencilla);
-                director.buildHamburguesa();
-            case "vegetariana":
-                director.setBuilder(vegetariana);
-                director.buildHamburguesa();
-                return director.getHamburguesa();
-            default:
-                return new Hamburguesa();
-        }
+    public void setPan(String pan){
+        this.pan = pan;
     }
     
+    public void setSalsas(String salsas){
+        this.salsas = salsas;
+    }
+    
+    public void setCarne(String carne){
+        this.carne = carne;
+    }
+    
+    public void setAdiciones(String adiciones){
+        this.adiciones = adiciones;
+    }
+    
+    public String getDetalles(){
+        return pan+", "+salsas+", "+carne+", "+adiciones;
+    }
 }
